@@ -1,0 +1,21 @@
+{
+  "name": "cards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "del": "6.0.0",
+    "gulp": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-sass": "latest",
+    "sass": "latest",
+    "gulp-rename": "latest"
+  }
+}
