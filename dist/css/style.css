@@ -1,0 +1,217 @@
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+
+.modal-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 5px #000;
+  border-radius: 3px;
+  padding: 4rem 10rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+.modal__form {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+.modal__email-label, .modal__password-label {
+  color: #a8a5a5;
+  margin-bottom: 0.5rem;
+}
+.modal__email-input, .modal__password-input {
+  margin-bottom: 1.5rem;
+  border-radius: 0;
+  padding: 0.4rem 0.5rem;
+  width: 250px;
+  border: 1px solid #a8a5a5;
+}
+.modal__email-input::placeholder, .modal__password-input::placeholder {
+  color: #a8a5a5;
+}
+.modal__email-input:focus, .modal__password-input:focus {
+  outline: none;
+  border: 1px solid #71C9CE;
+}
+.modal__email-input:focus:invalid, .modal__password-input:focus:invalid {
+  outline: none;
+  border: 1px solid #c30b0b;
+}
+.modal__btn-enter {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: 1px solid #a8a5a5;
+  color: #a8a5a5;
+  width: 50%;
+  align-self: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.modal__btn-enter:hover {
+  border: 1px solid #71C9CE;
+  color: #fff;
+  background-color: #71C9CE;
+}
+.modal__btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #a8a5a5;
+  transition: all 0.2s;
+}
+.modal__btn-close:hover {
+  color: #71C9CE;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 8rem minmax(calc(100vh - 13rem), 1fr) 5rem;
+  grid-template-columns: [filter-start] 25rem [filter-end content-start] 1fr [content-end];
+}
+
+.header {
+  grid-column: 1/-1;
+  background-color: #CBF1F5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  margin: 1rem 0 1rem 5rem;
+  display: flex;
+  align-items: center;
+}
+.header__text-logo {
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+.header__text-logo span {
+  color: #71C9CE;
+}
+.header__img-logo {
+  width: auto;
+  height: 6rem;
+}
+.header__btn {
+  margin-right: 5rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: 2px solid #71C9CE;
+  border-radius: 3px;
+  background-color: #A6E3E9;
+  transition: all 0.2s;
+}
+.header__btn:hover {
+  background-color: #71C9CE;
+}
+
+.filters {
+  grid-column: filter-start/filter-end;
+  background-color: #A6E3E9;
+  border-right: 3px solid #71C9CE;
+  padding: 3rem 1rem;
+  text-transform: uppercase;
+}
+.filters__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.filters div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.filters div:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.filters label {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.filters input {
+  width: 80%;
+  height: 2.5rem;
+}
+.filters select {
+  width: 80%;
+  text-align: center;
+  height: 2.5rem;
+}
+.filters input:focus, .filters select:focus {
+  outline: none;
+}
+
+.cards {
+  grid-column: content-start/content-end;
+  background-color: #A6E3E9;
+  position: relative;
+}
+.cards__no-items {
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer {
+  grid-column: 1/-1;
+  background-color: #71C9CE;
+  color: #fff;
+  position: relative;
+}
+.footer__copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

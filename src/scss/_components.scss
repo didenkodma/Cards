@@ -1,0 +1,101 @@
+// MODAL ENTER
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+}
+
+.modal-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-black, 0.6);
+}
+
+.modal {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: $shadow-one;
+    border-radius: 3px;
+    padding: 4rem 10rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+
+    &__form {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    &__email-label,
+    &__password-label {
+        color: $color-gray;
+        margin-bottom: 0.5rem;
+    }
+
+    &__email-input,
+    &__password-input {
+        margin-bottom: 1.5rem;
+        border-radius: 0;
+        padding: 0.4rem 0.5rem;
+        width: 250px;
+        border: $border-gray;
+    }
+
+    &__email-input::placeholder,
+    &__password-input::placeholder {
+        color: $color-gray;
+    }
+
+    &__email-input:focus,
+    &__password-input:focus {
+        outline: none;
+        border: $border-darkest;
+    }
+
+    &__email-input:focus:invalid,
+    &__password-input:focus:invalid {
+        outline: none;
+        border: $border-invalid;
+    }
+
+    &__btn-enter {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        border-radius: 3px;
+        border: $border-gray;
+        color: $color-gray;
+        width: 50%;
+        align-self: center;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    &__btn-enter:hover {
+        border: $border-darkest;
+        color: #fff;
+        background-color: $color-darkest;
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: $color-gray;
+        transition: all 0.2s;
+    }
+
+    &__btn-close:hover {
+        color: $color-darkest;
+    }
+}

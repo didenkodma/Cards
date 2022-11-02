@@ -1,0 +1,120 @@
+.header {
+    grid-column: 1 / -1;
+    background-color: $color-light;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        margin: 1rem 0 1rem 5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__text-logo {
+        font-size: 3rem;
+        margin-left: 1rem;
+
+        & span {
+            color: $color-darkest;
+        }
+    }
+
+    &__img-logo {
+        width: auto;
+        height: 6rem;
+    }
+
+    &__btn {
+        margin-right: 5rem;
+        padding: 1rem 2rem;
+        color: $color-white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        border: 2px solid $color-darkest;
+        border-radius: 3px;
+        background-color: $color-darker;
+        transition: all .2s;
+    }
+    &__btn:hover {
+        background-color: $color-darkest;
+    }
+}
+
+.filters {
+    grid-column: filter-start / filter-end;
+    background-color: $color-darker;
+    border-right: 3px solid $color-darkest;
+    padding: 3rem 1rem;
+    text-transform: uppercase;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & div:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+
+    & label {
+        font-weight: 700;
+        margin-bottom: .5rem;
+    }
+
+    & input {
+        width: 80%;
+        height: 2.5rem;
+    }
+
+    & select {
+        width: 80%;
+        text-align: center;
+        height: 2.5rem;
+    }
+
+    & input:focus,
+    & select:focus {
+        outline: none;
+    }
+}
+
+.cards {
+    grid-column: content-start / content-end;
+    background-color: $color-darker;
+    position: relative;
+
+    &__no-items {
+        font-size: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.footer {
+    grid-column: 1 / -1;
+    background-color: $color-darkest;
+    color: $color-white;
+    position: relative;
+
+    &__copy {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
