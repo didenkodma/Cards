@@ -1,0 +1,23 @@
+// Мінімальна висота блоку з контентом
+$height-content: calc(100vh - 13rem);
+
+// Кольори
+$color-lightest: #E3FDFD;
+$color-light: #CBF1F5;
+$color-darker: #A6E3E9;
+$color-darkest: #71C9CE;
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #a8a5a5;
+$color-invalid: #c30b0b;
+
+// Шрифти
+$font-primary: 'Roboto', sans-serif;
+
+// Тіні
+$shadow-one: 0 0 5px #000;
+
+// Бордери
+$border-gray: 1px solid $color-gray;
+$border-darkest: 1px solid $color-darkest;
+$border-invalid: 1px solid $color-invalid;
