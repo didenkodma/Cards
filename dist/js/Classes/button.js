@@ -1,3 +1,4 @@
+// Клас Button, що рендерить кнопку по заданим параметрам
 class Button {
 
     constructor(content, style, handler) {

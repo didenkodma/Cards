@@ -94,7 +94,12 @@
 .cards {
     grid-column: content-start / content-end;
     background-color: $color-darker;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
     position: relative;
+    padding: 1rem;
 
     &__no-items {
         font-size: 3rem;

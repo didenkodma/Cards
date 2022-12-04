@@ -1,3 +1,5 @@
+// Асинхронна функція авторизації (API)
+
 async function authorization(email, password) {
 
     const response = await fetch("https://ajax.test-danit.com/api/v2/cards/login", {

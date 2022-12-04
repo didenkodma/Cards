@@ -1,7 +1,9 @@
-import testHandler from "../Functions/testHandler.js";
 import buttonEnterHandler from "../Functions/buttonEnterHandler.js";
 import buttonModalCloseHandler from "../Functions/buttonModalCloseHandler.js";
 import buttonModalEnterHandler from "../Functions/buttonModalEnterHandler.js";
+import buttonModalCreateVisitHandler from "../Functions/buttonModalCreateVisitHandler.js";
+import buttonModalSendVisitHandler from "../Functions/buttonModalSendVisitHandler.js";
+import buttonEditCloseHandler from "../Functions/buttonEditCloseHandler.js";
 
 // Дані для створення кнопки атворизації
 const buttonEnter = {
@@ -32,7 +34,24 @@ const buttonCreateVisit = {
     selector: ".header__useable", 
     content: "Створити візит", 
     style: "header__btn", 
-    handler: testHandler
+    handler: buttonModalCreateVisitHandler
 }
 
-export {buttonEnter, buttonModalEnter, buttonModalClose, buttonCreateVisit};
+// Дані для створення кнопки, що відправляє запит з новим візитом на сервер
+const buttonSendVisit = {
+    selector: ".modal__form--visit", 
+    content: "Створити візит", 
+    style: "modal__btn-send", 
+    handler: buttonModalSendVisitHandler
+}
+
+// Дані для створення кнопки, що закриває модалку, яка редагує картку
+const buttonEditClose = {
+    selector: ".edit", 
+    content: "<i class=\"fa fa-regular fa-close\"></i>", 
+    style: "edit__btn-close", 
+    handler: buttonEditCloseHandler
+}
+
+
+export {buttonEnter, buttonModalEnter, buttonModalClose, buttonCreateVisit, buttonSendVisit, buttonEditClose};

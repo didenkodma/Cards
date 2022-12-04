@@ -1,12 +1,9 @@
-import Modal from "../Classes/modal.js";
-import {buttonCreateVisit} from "../DataStorage/buttons.js";
-import createButton from "./createButton.js";
-import removeElement from "./removeElement.js";
+import ModalEnter from "../Classes/modalEnter.js";
 
-
+// Обробник для кнопки, що відкриває вікно авторизації
 function buttonEnterHandler() {
 
-    new Modal().render('.wrapper');
+    new ModalEnter().render('.wrapper');
 
 }
 

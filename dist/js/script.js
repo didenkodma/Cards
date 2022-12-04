@@ -1,5 +1,4 @@
-import createButton from "./Functions/createButton.js";
-import {buttonEnter} from "./DataStorage/buttons.js";
+import appStart from "./Functions/appStart.js";
 
-// Створюємо кнопку для входу
-createButton(buttonEnter);
+// Запускаємо web-застосунок
+appStart();
